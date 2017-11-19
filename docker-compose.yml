@@ -1,0 +1,17 @@
+version: '3'
+services:
+  rutorrent:
+    image: <YOUR_Dockerfile_rutorrent>
+    environment:
+      - PGID=20
+      - PUID=501
+      - TZ=Asia/Taipei
+    ports:
+      - "8080:80"
+      - "5000:5000"
+      - "51413:51413"
+      - "6881:6881/udp"
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+    container_name: rutorrent
