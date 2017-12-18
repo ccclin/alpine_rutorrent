@@ -15,3 +15,22 @@ services:
       - ./config:/config
       - ./downloads:/downloads
     container_name: rutorrent
+
+  # rutorrent:
+  #   image: <YOUR_Dockerfile_rutorrent>
+  #   environment:
+  #     - PGID=1001
+  #     - PUID=1001
+  #     - TZ=Asia/Taipei
+  #   ports:
+  #     - "8080:80"
+  #     - "5000:5000"
+  #     - "51413:51413"
+  #     - "6881:6881/udp"
+  #   volumes:
+  #     - ~/p2p/rutorrent_volumes/config:/config
+  #     - ~/p2p/session2:/config/rtorrent/rtorrent_sess
+  #     - ~/p2p/rutorrent_volumes/downloads:/downloads
+  #     - ~/p2p/downloads:/downloads/incoming
+  #     - ~/p2p/torrents:/downloads/watched
+  #   container_name: rutorrent
